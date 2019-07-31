@@ -16,22 +16,14 @@ public class Main {
         int reverse = 0;
         int lsf = number % 10;
 
-        if (number >= 0) {
-            while (number >= 1) {
-                reverse += lsf;
-                reverse *= 10;
-                number /= 10;
-                lsf = number % 10;
-            }
-        } else {
-            while (number <= -1) {
-                reverse += lsf;
-                reverse *= 10;
-                number /= 10;
-                lsf = number % 10;
-            }
 
+        while (number != 0) {
+            reverse += lsf;
+            reverse *= 10;
+            number /= 10;
+            lsf = number % 10;
         }
+
 
         return (stoNum * 10) == reverse;
 
